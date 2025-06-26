@@ -96,6 +96,12 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                     <i className="fa fa-times" aria-hidden="true"></i>
                   </div>
 
+                  {/* Mobile Menu Header */}
+                  <div className="mobile-menu-header">
+                    <Image src={logoImgmbl} className="mobile-logo" alt="Playhost" width={120} height={40} />
+                    <h3 className="mobile-title">Menu</h3>
+                  </div>
+
                   <div className='navbar-item counter'>
                     <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
                       Home

@@ -4085,9 +4085,9 @@ p.lead {
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          padding-top: 80px;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
           animation: slideInFromTop 0.3s ease-out;
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
           
@@ -4114,16 +4114,16 @@ p.lead {
           }
           .menu {
             display: block;
-            padding: 0 20px;
-            text-align: left;
+            padding: 0;
+            text-align: center;
             width: 100%;
-            height: 100%;
+            max-width: 400px;
             position: relative;
             
             .mobile-close-btn {
               position: absolute;
               top: -60px;
-              right: 20px;
+              right: 0;
               width: 40px;
               height: 40px;
               background: rgba(255, 255, 255, 0.1);
@@ -4146,13 +4146,38 @@ p.lead {
               }
             }
             
+            .mobile-menu-header {
+              text-align: center;
+              margin-bottom: 30px;
+              padding: 20px 0;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+              
+              .mobile-logo {
+                margin-bottom: 15px;
+                filter: brightness(0) invert(1);
+              }
+              
+              .mobile-title {
+                color: #fff;
+                font-size: 24px;
+                font-weight: 600;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+              }
+            }
             .navbar-item {
               display: block;
               padding: 15px 0px;
               border-bottom: 1px solid rgba(255, 255, 255, .1);
-              text-align: left;
+              text-align: center;
               font-size: 18px;
               font-weight: 500;
+              margin: 0 auto;
               &::before{
                 content: '';
               }
@@ -4161,27 +4186,31 @@ p.lead {
                 text-decoration: none;
                 display: block;
                 width: 100%;
-                padding: 10px 0;
+                padding: 15px 20px;
                 transition: all 0.3s ease;
+                border-radius: 8px;
                 &:hover {
                   color: var(--primary-color);
-                  transform: translateX(10px);
+                  background: rgba(255, 255, 255, 0.1);
+                  transform: translateY(-2px);
                 }
               }
               .dropdown-custom.btn{
                 width: 100%;
-                text-align: left;
+                text-align: center;
                 background: none;
                 border: none;
                 color: #fff;
                 font-size: 18px;
                 font-weight: 500;
-                padding: 10px 0;
+                padding: 15px 20px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+                border-radius: 8px;
                 &:hover {
                   color: var(--primary-color);
-                  transform: translateX(10px);
+                  background: rgba(255, 255, 255, 0.1);
+                  transform: translateY(-2px);
                 }
               }
               .dropdown-toggle::after{
@@ -4198,19 +4227,21 @@ p.lead {
                 background: rgba(0, 0, 0, 0.3);
                 margin-top: 10px;
                 border-radius: 8px;
+                padding: 10px;
                  .dropdown a {
                   padding: 12px 20px;
-                  margin-left: 0;
+                  margin: 5px 0;
                   border: 0;
-                  border-bottom: 1px solid rgba(255, 255, 255, .1);
-                  text-align: left;
+                  border-radius: 6px;
+                  text-align: center;
                   color: #fff;
                   font-size: 16px;
                   transition: all 0.3s ease;
+                  display: block;
                   &:hover {
                     color: var(--primary-color);
-                    background: rgba(255, 255, 255, 0.05);
-                    transform: translateX(10px);
+                    background: rgba(255, 255, 255, 0.1);
+                    transform: translateY(-2px);
                   }
                   &:last-child {
                     border-bottom: none;
