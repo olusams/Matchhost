@@ -63,6 +63,19 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
     };
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (showmenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showmenu]);
+
     return(
          <nav className="navbar transition">
         <div className="container">
@@ -78,6 +91,10 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
               <div className="mobile">
                 {showmenu && 
                 <div className='menu'>
+                  {/* Close button */}
+                  <div className="mobile-close-btn" onClick={() => setBtnIcon(!showmenu)}>
+                    <i className="fa fa-times" aria-hidden="true"></i>
+                  </div>
 
                   <div className='navbar-item counter'>
                     <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
