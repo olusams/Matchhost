@@ -88,132 +88,132 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
           {/********* Logo *********/}
 
               {/********* Mobile Menu *********/}
-              <div className="mobile">
-                {showmenu && 
-                <div className='menu'>
-                  {/* Close button */}
-                  <div className="mobile-close-btn" onClick={() => setBtnIcon(!showmenu)}>
-                    <i className="fa fa-times" aria-hidden="true"></i>
-                  </div>
-
-                  {/* Mobile Menu Header */}
-                  <div className="mobile-menu-header">
-                    <Image src={logoImgmbl} className="mobile-logo" alt="Playhost" width={120} height={40} />
-                    <h3 className="mobile-title">Menu</h3>
-                  </div>
-
-                  <div className='navbar-item counter'>
-                    <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
-                      Home
-                    </Link>
-                  </div>
-
-                  <div className='navbar-item counter'>
-                    <div ref={ref1}>
-                      <div className="dropdown-custom dropdown-toggle btn" 
-                        onClick={() => {
-                                        handleBtnClick1();
-                                        closeMenu2();
-                                        closeMenu3();
-                                        closeMenu4();
-                                      }}>
-                        Gaming Services
-                      </div>
-                      {openMenu1 && (
-                        <div className='item-dropdown'>
-                          <div className="dropdown" onClick={closeMenu1}>
-                            <Link href="/games" onClick={() => setBtnIcon(!showmenu)}>Gaming PCs</Link>
-                            <Link href="/pricing" onClick={() => setBtnIcon(!showmenu)}>VR Gaming</Link>
-                            <Link href="/pricing2" onClick={() => setBtnIcon(!showmenu)}>Esports Arena</Link>
-                            <Link href="/pricing3" onClick={() => setBtnIcon(!showmenu)}>Gaming Events</Link>
-                          </div>
-                        </div>
-                      )}
+              {showmenu && (
+                <div className="mobile show">
+                  <div className='menu'>
+                    {/* Close button */}
+                    <div className="mobile-close-btn" onClick={() => setBtnIcon(!showmenu)}>
+                      <i className="fa fa-times" aria-hidden="true"></i>
                     </div>
-                  </div>
 
-                   <div className='navbar-item counter'>
-                      <Link href="/location" onClick={() => setBtnIcon(!showmenu)}>
-                      Our Location
+                    {/* Mobile Menu Header */}
+                    <div className="mobile-menu-header">
+                      <Image src={logoImgmbl} className="mobile-logo" alt="Playhost" width={120} height={40} />
+                      <h3 className="mobile-title">Menu</h3>
+                    </div>
+
+                    <div className='navbar-item counter'>
+                      <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
+                        Home
                       </Link>
                     </div>
 
                     <div className='navbar-item counter'>
-                      <div ref={ref2}>
+                      <div ref={ref1}>
                         <div className="dropdown-custom dropdown-toggle btn" 
                           onClick={() => {
-                                        handleBtnClick2();
-                                        closeMenu1();
-                                        closeMenu3();
-                                        closeMenu4();
-                                      }}>
-                          Community
+                                            handleBtnClick1();
+                                            closeMenu2();
+                                            closeMenu3();
+                                            closeMenu4();
+                                          }}>
+                          Gaming Services
                         </div>
-                        {openMenu2 && (
+                        {openMenu1 && (
                           <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu2}>
-                              <Link href="/knowledgebase" onClick={() => setBtnIcon(!showmenu)}>Gaming Guides</Link>
-                              <Link href="/faq" onClick={() => setBtnIcon(!showmenu)}>FAQ</Link>
-                              <Link href="/contact" onClick={() => setBtnIcon(!showmenu)}>Contact Us</Link>
+                            <div className="dropdown" onClick={closeMenu1}>
+                              <Link href="/games" onClick={() => setBtnIcon(!showmenu)}>Gaming PCs</Link>
+                              <Link href="/pricing" onClick={() => setBtnIcon(!showmenu)}>VR Gaming</Link>
+                              <Link href="/pricing2" onClick={() => setBtnIcon(!showmenu)}>Esports Arena</Link>
+                              <Link href="/pricing3" onClick={() => setBtnIcon(!showmenu)}>Gaming Events</Link>
                             </div>
                           </div>
                         )}
                       </div>
                     </div>
 
-                    <div className='navbar-item counter'>
-                      <Link href="/news" onClick={() => setBtnIcon(!showmenu)}>
-                      Gaming News
-                      </Link>
-                    </div>
-
-                    <div className='navbar-item counter'>
-                      <div ref={ref3}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={() => {
-                                        handleBtnClick3();
-                                        closeMenu1();
-                                        closeMenu2();
-                                        closeMenu4();
-                                      }}>
-                          About Leeds Gaming
-                        </div>
-                        {openMenu3 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu3}>
-                              <Link href="/about" onClick={() => setBtnIcon(!showmenu)}>About Us</Link>
-                              <Link href="/affliate" onClick={() => setBtnIcon(!showmenu)}>Partners</Link>
-                            </div>
-                          </div>
-                        )}
+                     <div className='navbar-item counter'>
+                        <Link href="/location" onClick={() => setBtnIcon(!showmenu)}>
+                        Our Location
+                        </Link>
                       </div>
-                    </div>
 
-                    <div className='navbar-item counter'>
-                      <div ref={ref4}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={() => {
-                                        handleBtnClick4();
-                                        closeMenu1();
-                                        closeMenu2();
-                                        closeMenu3();
-                                      }}>
-                          More Pages
-                        </div>
-                        {openMenu4 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu4}>
-                              <Link href="/login" onClick={() => setBtnIcon(!showmenu)}>Login</Link>
-                              <Link href="/register" onClick={() => setBtnIcon(!showmenu)}>Register</Link>
-                            </div>
+                      <div className='navbar-item counter'>
+                        <div ref={ref2}>
+                          <div className="dropdown-custom dropdown-toggle btn" 
+                            onClick={() => {
+                                          handleBtnClick2();
+                                          closeMenu1();
+                                          closeMenu3();
+                                          closeMenu4();
+                                        }}>
+                            Community
                           </div>
-                        )}
+                          {openMenu2 && (
+                            <div className='item-dropdown'>
+                              <div className="dropdown" onClick={closeMenu2}>
+                                <Link href="/knowledgebase" onClick={() => setBtnIcon(!showmenu)}>Gaming Guides</Link>
+                                <Link href="/faq" onClick={() => setBtnIcon(!showmenu)}>FAQ</Link>
+                                <Link href="/contact" onClick={() => setBtnIcon(!showmenu)}>Contact Us</Link>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
 
+                      <div className='navbar-item counter'>
+                        <Link href="/news" onClick={() => setBtnIcon(!showmenu)}>
+                        Gaming News
+                        </Link>
+                      </div>
+
+                      <div className='navbar-item counter'>
+                        <div ref={ref3}>
+                          <div className="dropdown-custom dropdown-toggle btn" 
+                            onClick={() => {
+                                          handleBtnClick3();
+                                          closeMenu1();
+                                          closeMenu2();
+                                          closeMenu4();
+                                        }}>
+                            About Leeds Gaming
+                          </div>
+                          {openMenu3 && (
+                            <div className='item-dropdown'>
+                              <div className="dropdown" onClick={closeMenu3}>
+                                <Link href="/about" onClick={() => setBtnIcon(!showmenu)}>About Us</Link>
+                                <Link href="/affliate" onClick={() => setBtnIcon(!showmenu)}>Partners</Link>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className='navbar-item counter'>
+                        <div ref={ref4}>
+                          <div className="dropdown-custom dropdown-toggle btn" 
+                            onClick={() => {
+                                          handleBtnClick4();
+                                          closeMenu1();
+                                          closeMenu2();
+                                          closeMenu3();
+                                        }}>
+                            More Pages
+                          </div>
+                          {openMenu4 && (
+                            <div className='item-dropdown'>
+                              <div className="dropdown" onClick={closeMenu4}>
+                                <Link href="/login" onClick={() => setBtnIcon(!showmenu)}>Login</Link>
+                                <Link href="/register" onClick={() => setBtnIcon(!showmenu)}>Register</Link>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                  </div>
                 </div>
-                }
-          </div>
+              )}
           {/********* Mobile Menu *********/}
 
           {/********* Dekstop Menu *********/}

@@ -3912,7 +3912,7 @@ p.lead {
     .float-text {
       display: block;
     }
-    .mobilemenu, .mobile{
+    .mobilemenu{
       display: none;
     }
     
@@ -4090,6 +4090,10 @@ p.lead {
           padding: 20px;
           animation: slideInFromTop 0.3s ease-out;
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+          
+          &.show {
+            display: flex !important;
+          }
           
           &::before {
             content: '';
