@@ -123,7 +123,7 @@ section {
     align-items: center;
 }
 
-/* Bootstrap conflict reset */
+/* Bootstrap conflict reset - less aggressive */
 .row {
     margin: 0;
     width: 100%;
@@ -137,7 +137,7 @@ section {
     box-sizing: border-box;
 }
 
-/* Ensure proper centering for all content */
+/* Ensure proper centering for specific elements only */
 .text-center {
     text-align: center !important;
 }
@@ -4076,17 +4076,19 @@ p.lead {
         align-items: center;
       }
       
-      /* Mobile text alignment */
+      /* Improved mobile text alignment - less aggressive */
       h1 {
           font-size: 2.5rem;
           text-align: center;
           margin-bottom: 1rem;
+          line-height: 1.2;
       }
       
       h2 {
           font-size: 2.2rem;
           text-align: center;
           margin-bottom: 1rem;
+          line-height: 1.3;
       }
       
       h3 {
@@ -4102,8 +4104,9 @@ p.lead {
       }
       
       p {
-          text-align: center;
+          text-align: left; /* Allow natural text flow */
           margin-bottom: 1rem;
+          line-height: 1.6;
       }
       
       .section-header {
@@ -4183,15 +4186,17 @@ p.lead {
     slidesPerView: 2;
   }
   
-  /* Text alignment for small tablets */
+  /* Improved text alignment for small tablets */
   h1 {
       font-size: 2.2rem;
       text-align: center;
+      line-height: 1.2;
   }
   
   h2 {
       font-size: 1.8rem;
       text-align: center;
+      line-height: 1.3;
   }
   
   h3 {
@@ -4202,6 +4207,11 @@ p.lead {
   h4 {
       font-size: 1.2rem;
       text-align: center;
+  }
+  
+  p {
+      text-align: left; /* Allow natural text flow */
+      line-height: 1.6;
   }
   
   .section-header {
@@ -4226,7 +4236,7 @@ p.lead {
   }
   
   .card-text {
-      text-align: center;
+      text-align: left; /* Allow natural text flow */
   }
   
   .pricing-card {
@@ -4285,76 +4295,7 @@ p.lead {
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
-      text-align: center;
-  }
-  
-  .blog-item {
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-  
-  .blog-item h4 {
-      text-align: center;
-  }
-  
-  .blog-item p {
-      text-align: center;
-  }
-  
-  .blog-item .meta {
-      text-align: center;
-  }
-  
-  .testimonial {
-      text-align: center;
-      padding: 1.5rem;
-  }
-  
-  .testimonial .quote {
-      text-align: center;
-      font-size: 0.95rem;
-  }
-  
-  .testimonial .author {
-      text-align: center;
-  }
-  
-  .table {
-      text-align: center;
-      font-size: 0.9rem;
-  }
-  
-  .table th {
-      text-align: center;
-      padding: 0.75rem 0.5rem;
-  }
-  
-  .table td {
-      text-align: center;
-      padding: 0.75rem 0.5rem;
-  }
-  
-  footer {
-      text-align: center;
-  }
-  
-  footer .widget {
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-  
-  footer .widget h5 {
-      text-align: center;
-  }
-  
-  footer .widget ul {
-      text-align: center;
-      list-style: none;
-      padding-left: 0;
-  }
-  
-  footer .widget ul li {
-      text-align: center;
+      text-align: left; /* Allow natural text input */
   }
 }
 
@@ -4382,32 +4323,38 @@ p.lead {
     text-align: center;
   }
   
-  /* Text alignment for mobile */
+  /* Improved mobile layout */
   h1 {
       font-size: 2rem;
       text-align: center;
       line-height: 1.2;
+      margin-bottom: 1rem;
   }
   
   h2 {
       font-size: 1.6rem;
       text-align: center;
       line-height: 1.3;
+      margin-bottom: 1rem;
   }
   
   h3 {
       font-size: 1.4rem;
       text-align: center;
+      margin-bottom: 1rem;
   }
   
   h4 {
       font-size: 1.2rem;
       text-align: center;
+      margin-bottom: 1rem;
   }
   
   p {
       font-size: 0.95rem;
-      text-align: center;
+      text-align: left; /* Allow natural text flow */
+      line-height: 1.6;
+      margin-bottom: 1rem;
   }
   
   .section-header {
@@ -4434,7 +4381,7 @@ p.lead {
   }
   
   .card-text {
-      text-align: center;
+      text-align: left; /* Allow natural text flow */
   }
   
   .pricing-card {
@@ -4480,7 +4427,6 @@ p.lead {
   .navbar-nav .nav-link {
       text-align: center;
       padding: 0.75rem 0;
-      font-size: 0.9rem;
   }
   
   .contact-form {
@@ -4494,95 +4440,20 @@ p.lead {
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
-      text-align: center;
+      text-align: left; /* Allow natural text input */
   }
   
-  .blog-item {
-      text-align: center;
-      margin-bottom: 1.5rem;
+  /* Improve spacing and layout */
+  .row {
+      margin: 0;
   }
   
-  .blog-item h4 {
-      text-align: center;
-  }
-  
-  .blog-item p {
-      text-align: center;
-  }
-  
-  .blog-item .meta {
-      text-align: center;
-  }
-  
-  .testimonial {
-      text-align: center;
-      padding: 1.5rem;
-  }
-  
-  .testimonial .quote {
-      text-align: center;
-      font-size: 0.95rem;
-  }
-  
-  .testimonial .author {
-      text-align: center;
-  }
-  
-  .btn {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-  }
-  
-  .table {
-      text-align: center;
-      font-size: 0.8rem;
-  }
-  
-  .table th {
-      text-align: center;
-      padding: 0.5rem 0.25rem;
-  }
-  
-  .table td {
-      text-align: center;
-      padding: 0.5rem 0.25rem;
-  }
-  
-  footer {
-      text-align: center;
-  }
-  
-  footer .widget {
-      text-align: center;
-      margin-bottom: 1rem;
-  }
-  
-  footer .widget h5 {
-      text-align: center;
-      font-size: 1rem;
-  }
-  
-  footer .widget ul {
-      text-align: center;
-      list-style: none;
-      padding-left: 0;
-  }
-  
-  footer .widget ul li {
-      text-align: center;
-      font-size: 0.9rem;
-  }
-  
-  ul, ol {
-      text-align: center;
-      padding-left: 0;
-      list-style: none;
-  }
-  
-  li {
-      text-align: center;
-      margin-bottom: 0.25rem;
+  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+  .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+      padding: 0 10px;
+      box-sizing: border-box;
   }
 }
 
@@ -4598,38 +4469,45 @@ p.lead {
         font-size: 1.8rem;
         text-align: center;
         line-height: 1.2;
+        margin-bottom: 1rem;
     }
     
     h2 {
         font-size: 1.5rem;
         text-align: center;
         line-height: 1.3;
+        margin-bottom: 1rem;
     }
     
     h3 {
         font-size: 1.3rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
     
     h4 {
         font-size: 1.1rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
     
     h5 {
         font-size: 1rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
     
     h6 {
         font-size: 0.9rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
     
     p {
         font-size: 0.9rem;
         line-height: 1.5;
-        text-align: center;
+        text-align: left; /* Allow natural text flow */
+        margin-bottom: 1rem;
     }
     
     .section-header {
@@ -4661,7 +4539,7 @@ p.lead {
     }
     
     .card-text {
-        text-align: center;
+        text-align: left; /* Allow natural text flow */
         font-size: 0.9rem;
     }
     
@@ -4700,7 +4578,6 @@ p.lead {
     
     .game-card .d-price {
         text-align: center;
-        font-size: 0.9rem;
     }
     
     .navbar-nav {
@@ -4725,43 +4602,7 @@ p.lead {
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
-        text-align: center;
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
-    
-    .blog-item {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    .blog-item h4 {
-        text-align: center;
-        font-size: 1rem;
-    }
-    
-    .blog-item p {
-        text-align: center;
-        font-size: 0.9rem;
-    }
-    
-    .blog-item .meta {
-        text-align: center;
-        font-size: 0.8rem;
-    }
-    
-    .testimonial {
-        text-align: center;
-        padding: 1rem;
-    }
-    
-    .testimonial .quote {
-        text-align: center;
-        font-size: 0.9rem;
-    }
-    
-    .testimonial .author {
-        text-align: center;
+        text-align: left; /* Allow natural text input */
         font-size: 0.9rem;
     }
     
@@ -4771,21 +4612,20 @@ p.lead {
         padding: 0.5rem 1rem;
     }
     
-    .table {
-        text-align: center;
-        font-size: 0.8rem;
+    /* Improve spacing for very small screens */
+    .row {
+        margin: 0;
     }
     
-    .table th {
-        text-align: center;
-        padding: 0.5rem 0.25rem;
+    .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+    .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+    .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        padding: 0 5px;
+        box-sizing: border-box;
     }
     
-    .table td {
-        text-align: center;
-        padding: 0.5rem 0.25rem;
-    }
-    
+    /* Improve footer layout */
     footer {
         text-align: center;
     }
@@ -4812,13 +4652,13 @@ p.lead {
     }
     
     ul, ol {
-        text-align: center;
-        padding-left: 0;
-        list-style: none;
+        text-align: left; /* Allow natural list flow */
+        padding-left: 20px;
+        list-style: disc;
     }
     
     li {
-        text-align: center;
+        text-align: left;
         margin-bottom: 0.25rem;
     }
 }
@@ -5085,15 +4925,17 @@ p.lead {
     slidesPerView: 2;
   }
   
-  /* Text alignment for small tablets */
+  /* Improved text alignment for small tablets */
   h1 {
       font-size: 2.2rem;
       text-align: center;
+      line-height: 1.2;
   }
   
   h2 {
       font-size: 1.8rem;
       text-align: center;
+      line-height: 1.3;
   }
   
   h3 {
@@ -5104,6 +4946,11 @@ p.lead {
   h4 {
       font-size: 1.2rem;
       text-align: center;
+  }
+  
+  p {
+      text-align: left; /* Allow natural text flow */
+      line-height: 1.6;
   }
   
   .section-header {
@@ -5128,7 +4975,7 @@ p.lead {
   }
   
   .card-text {
-      text-align: center;
+      text-align: left; /* Allow natural text flow */
   }
   
   .pricing-card {
@@ -5187,76 +5034,7 @@ p.lead {
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
-      text-align: center;
-  }
-  
-  .blog-item {
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-  
-  .blog-item h4 {
-      text-align: center;
-  }
-  
-  .blog-item p {
-      text-align: center;
-  }
-  
-  .blog-item .meta {
-      text-align: center;
-  }
-  
-  .testimonial {
-      text-align: center;
-      padding: 1.5rem;
-  }
-  
-  .testimonial .quote {
-      text-align: center;
-      font-size: 0.95rem;
-  }
-  
-  .testimonial .author {
-      text-align: center;
-  }
-  
-  .table {
-      text-align: center;
-      font-size: 0.9rem;
-  }
-  
-  .table th {
-      text-align: center;
-      padding: 0.75rem 0.5rem;
-  }
-  
-  .table td {
-      text-align: center;
-      padding: 0.75rem 0.5rem;
-  }
-  
-  footer {
-      text-align: center;
-  }
-  
-  footer .widget {
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-  
-  footer .widget h5 {
-      text-align: center;
-  }
-  
-  footer .widget ul {
-      text-align: center;
-      list-style: none;
-      padding-left: 0;
-  }
-  
-  footer .widget ul li {
-      text-align: center;
+      text-align: left; /* Allow natural text input */
   }
 }
 
@@ -5360,6 +5138,99 @@ p.lead {
 
 .swiper-fade .swiper-slide {
   opacity: 0;
+}
+
+/* About page specific mobile improvements */
+@media only screen and (max-width: 767px) {
+  .images-deco-1 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .year-card {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 200px;
+  }
+  
+  .year-card h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .year-card .atr-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .f-profile {
+    margin-bottom: 2rem;
+  }
+  
+  .f-profile h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .de_count {
+    margin-bottom: 2rem;
+  }
+  
+  .de_count h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .de_count h4 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  
+  /* Improve spacing for vision/mission section */
+  .col-lg-8.offset-lg-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .col-lg-6.col-md-6 {
+    margin-bottom: 2rem;
+  }
+  
+  /* Fix team section layout */
+  .col-lg-3:first-child {
+    margin-bottom: 2rem;
+  }
+  
+  .col-lg-3:first-child h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .year-card {
+    max-width: 150px;
+  }
+  
+  .year-card h1 {
+    font-size: 2.5rem;
+  }
+  
+  .year-card .atr-desc {
+    font-size: 0.8rem;
+  }
+  
+  .de_count h3 {
+    font-size: 2rem;
+  }
+  
+  .de_count h4 {
+    font-size: 0.8rem;
+  }
+  
+  .f-profile h4 {
+    font-size: 1rem;
+  }
 }
 
 
