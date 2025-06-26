@@ -84,6 +84,7 @@ body{
     background: var(--bg-dark-1);
     line-height: 30px;
     padding: 0;
+    padding-top: 80px; /* Add padding for fixed navbar */
     line-height: 1.8em;
     word-spacing: 0px;
     letter-spacing: -0.2px;
@@ -91,9 +92,88 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
+    margin: 0;
+    min-height: 100vh;
     &.ohidden{
       overflow: hidden !important;
     }
+}
+
+/* Global layout fixes */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Bootstrap conflict reset */
+.row {
+    margin: 0;
+    width: 100%;
+}
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+.col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Ensure proper centering for all content */
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/* Fix for any floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Reset any Bootstrap margins that might cause issues */
+.mb-0, .mb-1, .mb-2, .mb-3, .mb-4, .mb-5 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0, .mt-1, .mt-2, .mt-3, .mt-4, .mt-5 {
+    margin-top: 0 !important;
+}
+
+/* Ensure proper width and centering */
+.w-100 {
+    width: 100% !important;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Text alignment improvements */
@@ -1391,7 +1471,7 @@ a.btn-line{
 
 .navbar {
   padding: 15px 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1401,6 +1481,7 @@ a.btn-line{
   border-bottom: solid 1px rgba(255, 255, 255, 0);
   z-index: 999;
   transition: all 0.3s ease;
+  background: var(--bg-dark-1);
   &.white {
     a {
       color: $black;
@@ -4056,8 +4137,10 @@ p.lead {
           display: block;
           max-width: 100%;
           padding: 0 15px;
-          margin: 0;
+          margin: 0 auto;
           position: relative;
+          width: 100%;
+          box-sizing: border-box;
         }
          .menu_side_area {
           margin-left: 20px;
