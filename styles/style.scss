@@ -4085,9 +4085,9 @@ p.lead {
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
-          padding: 20px;
+          padding: 60px 20px 20px 20px;
           animation: slideInFromTop 0.3s ease-out;
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
           
@@ -4123,10 +4123,15 @@ p.lead {
             width: 100%;
             max-width: 400px;
             position: relative;
+            min-height: auto;
+            
+            @media (max-height: 600px) {
+              margin-top: 20px;
+            }
             
             .mobile-close-btn {
               position: absolute;
-              top: -60px;
+              top: -50px;
               right: 0;
               width: 40px;
               height: 40px;
