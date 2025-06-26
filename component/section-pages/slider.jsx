@@ -21,7 +21,7 @@ const YourComponent = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 8000 }}
     >
       <SwiperSlide>
         <div className="swiper-inner" style={{

@@ -15,7 +15,7 @@ const Slider = () => {
       slidesPerView={1}
       loop={true}
       navigation
-      autoplay={{ delay: 4000 }} 
+      autoplay={{ delay: 8000 }} 
       effect="fade" // Change effect to "fade"
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
