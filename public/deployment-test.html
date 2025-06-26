@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeds Gaming Hub - Deployment Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: rgba(0,255,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Leeds Gaming Hub</h1>
+        <div class="status">
+            ✅ <strong>Deployment Test Successful!</strong>
+        </div>
+        
+        <div class="info">
+            <h3>Test Information:</h3>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+            <p><strong>User Agent:</strong> <span id="useragent"></span></p>
+            <p><strong>Page URL:</strong> <span id="pageurl"></span></p>
+        </div>
+        
+        <div class="info">
+            <h3>Next Steps:</h3>
+            <p>If you can see this page, Netlify is serving files correctly.</p>
+            <p>Try accessing the main site: <a href="/" style="color: #ffd700;">Homepage</a></p>
+            <p>Try other pages: <a href="/about/" style="color: #ffd700;">About</a> | <a href="/contact/" style="color: #ffd700;">Contact</a> | <a href="/games/" style="color: #ffd700;">Games</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        document.getElementById('useragent').textContent = navigator.userAgent;
+        document.getElementById('pageurl').textContent = window.location.href;
+    </script>
+</body>
+</html> 
